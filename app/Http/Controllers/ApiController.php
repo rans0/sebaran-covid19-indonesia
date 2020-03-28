@@ -13,11 +13,21 @@ class ApiController extends Controller
         // $respones = Http::get('https://api.kawalcorona.com/sembuh');
         $responeIndonesia = Http::get('https://api.kawalcorona.com/indonesia');
 
+        $responeGlobal = Http::get('https://api.kawalcorona.com/');
+
+        $positfGlobal = Http::get('https://api.kawalcorona.com/positif');
+        $sembuhGlobal = Http::get('https://api.kawalcorona.com/sembuh');
+        $meninggalGlobal = Http::get('https://api.kawalcorona.com/meninggal');
 
         $provinsi = $responeProvinsi->json();
         $indonesia = $responeIndonesia->json();
+        $positif = $positfGlobal->json();
+        $sembuh = $sembuhGlobal->json();
+        $meninggal = $meninggalGlobal->json();
+        $global = $responeGlobal->json();
+
         // dd($data);
 
-        return view('index', compact('provinsi', 'indonesia'));
+        return view('index', compact('global', 'provinsi', 'indonesia', 'positif', 'meninggal', 'sembuh'));
     }
 }
