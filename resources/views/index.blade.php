@@ -32,7 +32,109 @@
 
 <body>
 
-    <div class="container" id="header-bar">
+    <div class="container" id="Global">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h2 class="text-center">Laporan Kasus Corona Global Update</h2>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            {{-- <div class="col-12 "> --}}
+                {{-- @foreach ($indonesia as $id) --}}
+                {{-- @foreach ($positif as $ps) --}}
+                <div class="col-xl-4">
+                    <div class="card">
+
+                      <div class="card-body">
+                        <h5 class="card-title">Positif</h5>
+                        <h3 class="card-text">{{ $positif['value'] }}</h3>
+                      </div>
+                      <div class="card-header align-items-center">
+                        <img src="https://img.icons8.com/cute-clipart/100/000000/sad.png" alt="" width="75" height="75">
+                      </div>
+
+                    </div>
+                </div>
+                {{-- @endforeach --}}
+
+                {{-- @foreach ($sembuh as $nt) --}}
+                <div class="col-xl-4">
+                    <div class="card">
+
+                      <div class="card-body">
+                        <h5 class="card-title">Sembuh</h5>
+                        <h3 class="card-text">{{ $sembuh['value'] }}</h3>
+                      </div>
+                      <div class="card-header align-items-center">
+                        <img src="https://img.icons8.com/cute-clipart/100/000000/happy.png" alt="" width="75" height="75">
+                      </div>
+
+                    </div>
+                </div>
+                {{-- @endforeach --}}
+
+                {{-- @foreach ($mati as $mt) --}}
+                    <div class="col-xl-4">
+                        <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Meninggal</h5>
+                            <h3 class="card-text">{{ $meninggal['value'] }}</h3>
+                        </div>
+                        <div class="card-header align-items-center">
+                            <img src="https://img.icons8.com/cute-clipart/100/000000/crying.png" alt="" width="75" height="75">
+                        </div>
+
+                        </div>
+                    </div>
+                {{-- @endforeach --}}
+
+
+                {{-- @endforeach --}}
+            {{-- </div> --}}
+        </div>
+    </div>
+
+    <div class="container" id="global">
+
+        <table id="glob" class="table table-striped table-bordered" style="width:100%">
+            <thead class="thead-dark">
+
+                <tr>
+                    {{-- <th scope="col">No</th> --}}
+                    <th scope="col">Negara</th>
+                    <th scope="col">Positif</th>
+                    <th scope="col">Sembuh</th>
+                    <th scope="col">Meninggal</th>
+                  </tr>
+
+            </thead>
+            <tbody>
+
+                @foreach ($global as $p)
+                    <tr>
+                        {{-- <td>$no</td> --}}
+                        <td>{{ $p['attributes']['Country_Region'] }}</td>
+                        <td>{{ $p['attributes']['Active'] }}</td>
+                        <td>{{ $p['attributes']['Recovered'] }}</td>
+                        <td>{{ $p['attributes']['Deaths'] }}</td>
+                    </tr>
+                @endforeach
+
+            </tbody>
+            <tfoot  class="thead-dark">
+                <tr>
+                    <th scope="col">Negara</th>
+                    <th scope="col">Positif</th>
+                    <th scope="col">Sembuh</th>
+                    <th scope="col">Meninggal</th>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+    <div class="container" id="Indonesia">
         <div class="row mb-3">
             <div class="col-12">
                 <h2 class="text-center">Laporan Kasus Corona Indonesia Update</h2>
@@ -89,7 +191,7 @@
 
     <div class="container" id="provinsi">
 
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <table id="indo" class="table table-striped table-bordered" style="width:100%">
             <thead class="thead-dark">
 
                 <tr>
@@ -128,7 +230,8 @@
 
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#indo').DataTable();
+            $('#glob').DataTable();
         } );
     </script>
 
