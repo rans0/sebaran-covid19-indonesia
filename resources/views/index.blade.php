@@ -12,7 +12,9 @@
      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
      <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
-    <title>Sebaran Covid-19</title>
+     <!-----ChartJS---->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+     <title>Sebaran Covid-19</title>
 
     <style>
 
@@ -32,6 +34,11 @@
 
 <body>
 
+    <div class="container" id="chart">
+        <h1>Grafik Covid19 Provinsi</h1>
+        {!! $chart->container() !!}
+    </div>
+
     <div class="container" id="Global">
         <div class="row mb-3">
             <div class="col-12">
@@ -39,9 +46,7 @@
             </div>
         </div>
         <div class="row align-items-center">
-            {{-- <div class="col-12 "> --}}
-                {{-- @foreach ($indonesia as $id) --}}
-                {{-- @foreach ($positif as $ps) --}}
+
                 <div class="col-xl-4">
                     <div class="card">
 
@@ -55,9 +60,7 @@
 
                     </div>
                 </div>
-                {{-- @endforeach --}}
 
-                {{-- @foreach ($sembuh as $nt) --}}
                 <div class="col-xl-4">
                     <div class="card">
 
@@ -71,27 +74,21 @@
 
                     </div>
                 </div>
-                {{-- @endforeach --}}
 
-                {{-- @foreach ($mati as $mt) --}}
-                    <div class="col-xl-4">
-                        <div class="card">
+                <div class="col-xl-4">
+                    <div class="card">
 
-                        <div class="card-body">
-                            <h5 class="card-title">Meninggal</h5>
-                            <h3 class="card-text">{{ $meninggal['value'] }}</h3>
-                        </div>
-                        <div class="card-header align-items-center">
-                            <img src="https://img.icons8.com/cute-clipart/100/000000/crying.png" alt="" width="75" height="75">
-                        </div>
+                     <div class="card-body">
+                        <h5 class="card-title">Meninggal</h5>
+                        <h3 class="card-text">{{ $meninggal['value'] }}</h3>
+                     </div>
+                     <div class="card-header align-items-center">
+                        <img src="https://img.icons8.com/cute-clipart/100/000000/crying.png" alt="" width="75" height="75">
+                     </div>
 
-                        </div>
                     </div>
-                {{-- @endforeach --}}
+                </div>
 
-
-                {{-- @endforeach --}}
-            {{-- </div> --}}
         </div>
     </div>
 
@@ -234,6 +231,6 @@
             $('#glob').DataTable();
         } );
     </script>
-
+    {!! $chart->script() !!}
 </body>
 </html>

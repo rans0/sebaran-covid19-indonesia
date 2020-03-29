@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
+use App\Charts\CovidChart;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
     public function SebaranCovid()
     {
+
         $responeProvinsi = Http::get('https://api.kawalcorona.com/indonesia/provinsi');
-
-        // $respones = Http::get('https://api.kawalcorona.com/sembuh');
         $responeIndonesia = Http::get('https://api.kawalcorona.com/indonesia');
-
         $responeGlobal = Http::get('https://api.kawalcorona.com/');
-
         $positfGlobal = Http::get('https://api.kawalcorona.com/positif');
         $sembuhGlobal = Http::get('https://api.kawalcorona.com/sembuh');
         $meninggalGlobal = Http::get('https://api.kawalcorona.com/meninggal');
@@ -28,6 +26,24 @@ class ApiController extends Controller
 
         // dd($data);
 
-        return view('index', compact('global', 'provinsi', 'indonesia', 'positif', 'meninggal', 'sembuh'));
+        //mengirim data
+        $data = collect(Http::get('https://api.kawalcorona.com/indonesia/provinsi')->json());
+        $labels = $data->flatten(1)->pluck('Provinsi');
+        $positifchart = $data->flatten(1)->pluck('Kasus_Posi');
+        $meninggalchart = $data->flatten(1)->pluck('Kasus_Meni');
+
+        //flatten(1) untuk menghilangkan key array pertama, kasus ini key attributes yang dihilangkan
+        //pluck untuk mengambil value dari key
+
+        //membuat chart
+        $chart = new CovidChart;
+        $chart->labels($labels);
+        $chart->dataset('Kasus Positif', 'bar', $positifchart)->backgroundColor('yellow');
+        $chart->dataset('Kasus Meninggal', 'bar', $meninggalchart)->backgroundColor('red');
+
+        return view('index', compact('global', 'provinsi', 'indonesia', 'positif', 'meninggal', 'sembuh'), [
+                    'chart'=> $chart,
+                ]);
     }
+
 }
