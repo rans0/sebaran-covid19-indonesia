@@ -39,7 +39,7 @@
         {!! $chart->container() !!}
     </div>
 
-    <div class="container" id="Global">
+    <div class="container" id="chart">
         <div class="row mb-3">
             <div class="col-12">
                 <h2 class="text-center">Laporan Kasus Corona Global Update</h2>
