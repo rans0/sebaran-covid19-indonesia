@@ -65,7 +65,7 @@
                     <div class="card">
 
                       <div class="card-body">
-                        <h5 class="card-title">Sembuh</h5>
+                        <h5 class="card-title">Sembuhh</h5>
                         <h3 class="card-text">{{ $sembuh['value'] }}</h3>
                       </div>
                       <div class="card-header align-items-center">
