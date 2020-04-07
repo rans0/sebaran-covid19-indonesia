@@ -1,0 +1,113 @@
+@import 'reset';
+@import 'variables';
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: set-text-color($font-color);
+  background-color: white;
+  height: 2000px;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  height: 655px;
+
+  &__left {
+    flex: 2 0 65%;
+    color: white;
+    background-color: $base-color;
+    padding: 20px;
+
+    header {
+      width: 85%;
+      margin: 0 auto;
+
+      .nav {
+        display: flex;
+        padding: 5px 10px;
+        border-bottom: 1px solid white;
+
+        .nav-logo {
+          img {
+            width: 45px;
+          }
+        }
+
+        .nav-menu {
+          margin: auto 0;
+          margin-left: auto;
+          display: flex;
+
+          &__link {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 25px;
+            transition: .3s ease;
+
+            &:hover {
+              color: brown;
+            }
+          }
+        }
+      }
+    }
+
+    .home-info {
+      width: 85%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0 10px;
+
+      &__title {
+        h5 {
+          font-size: 1.8em;
+          margin-bottom: 15px;
+        }
+      }
+
+      &__paraf {
+        width: 60%;
+      }
+
+      &__button {
+        margin-top: 40px;
+        a {
+          color: white;
+          text-decoration: none;
+          background-color: $second-color;
+          padding: 8px 20px;
+          font-size: .7em;
+          border-radius: 5px;
+          transition: .5s ease;
+
+          &:hover {
+            box-shadow: 2px 4px 8px #1D0729;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    flex: 1 0 35%;
+    color: white;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 380px;
+      margin-right: -40px;
+      transform: translateY(15px);
+    }
+  }
+}
+
