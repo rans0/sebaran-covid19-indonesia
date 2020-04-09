@@ -1,7 +1,50 @@
+@import 'variables';
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+
+.card {
+  // border: 1px solid magenta;
+  width: 220px;
+  height: 455px;
+  border-radius: 22px 22px 0 0;
+  margin-left: 50px;
+  text-align: center;
+
+  &-img {
+    width: 120px;
+    margin-top: 70px;
+  }
+
+  &-title {
+    margin-top: 20px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  &-number {
+    margin: 0 auto;
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: $second-color;
+    // border: 1px solid magenta;
+
+    h6 {
+      font-size: 1.1em;
+      line-height: 35px;
+      color: white;
+    }
+  }
+}

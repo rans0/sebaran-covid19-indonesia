@@ -6,6 +6,44 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  width: 220px;
+  height: 455px;
+  border-radius: 22px 22px 0 0;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.card-img {
+  width: 120px;
+  margin-top: 70px;
+}
+
+.card-title {
+  margin-top: 20px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.card-number {
+  margin: 0 auto;
+  width: 120px;
+  height: 35px;
+  border-radius: 8px;
+  background-color: #45185B;
+}
+
+.card-number h6 {
+  font-size: 1.1em;
+  line-height: 35px;
+  color: white;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: set-text-color(#2F2E30);
@@ -91,7 +129,7 @@ body {
 }
 
 .home__left .home-info__paraf {
-  width: 60%;
+  width: 70%;
 }
 
 .home__left .home-info__button {
@@ -137,5 +175,107 @@ body {
   margin-right: -40px;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
+}
+
+.indonesia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+.indonesia-left {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 0 70%;
+          flex: 2 0 70%;
+  padding-top: 100px;
+}
+
+.indonesia-left__header {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+  padding-right: 50px;
+}
+
+.indonesia-left__header h5 {
+  font-size: 1.2em;
+  color: #FA3660;
+  margin-right: 25px;
+  margin-left: auto;
+}
+
+.indonesia-left__header .line {
+  margin: auto 0;
+  width: 630px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FA3660;
+  line-height: 10px;
+}
+
+.indonesia-left__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.indonesia-left__content .card-positif {
+  background-color: #FAD336;
+}
+
+.indonesia-left__content .card-sembuh {
+  background-color: #36FA84;
+}
+
+.indonesia-left__content .card-sembuh .card-img {
+  width: 110px;
+}
+
+.indonesia-left__content .card-meninggal {
+  background-color: #FA3660;
+  margin-right: 50px;
+}
+
+.indonesia-left__content .card-meninggal .card-title {
+  margin-top: 30px;
+}
+
+.indonesia-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  padding-top: 200px;
+  padding-left: 50px;
+}
+
+.indonesia-right .info-indonesia__img {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.indonesia-right .info-indonesia__paraf {
+  width: 80%;
+  color: #2F2E30;
+}
+
+.indonesia-right .info-indonesia__paraf h4 {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.indonesia-right .info-indonesia__paraf p {
+  margin-bottom: 20px;
+}
+
+.indonesia-right a {
+  color: #2F2E30;
+  text-decoration: none;
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

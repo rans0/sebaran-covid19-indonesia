@@ -72,7 +72,7 @@ body {
       }
 
       &__paraf {
-        width: 60%;
+        width: 70%;
       }
 
       &__button {
@@ -111,3 +111,99 @@ body {
   }
 }
 
+.indonesia {
+  display: flex;
+  height: auto;
+
+
+  &-left {
+    flex: 2 0 70%;
+    padding-top: 100px;
+
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      margin-bottom: 70px;
+      padding-right: 50px;
+
+      h5 {
+        font-size: 1.2em;
+        color: $base-color;
+        margin-right: 25px;
+        margin-left: auto;
+      }
+
+      .line {
+        margin: auto 0;
+        width: 630px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $base-color;
+        line-height: 10px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+
+      .card-positif {
+        background-color: $danger-color;
+      }
+
+      .card-sembuh {
+        background-color: $success-color;
+
+        .card-img {
+          width: 110px;
+        }
+      }
+
+      .card-meninggal {
+        background-color: $base-color;
+        margin-right: 50px;
+
+        .card-title {
+          margin-top: 30px;
+        }
+      }
+    }
+
+
+  }
+
+  &-right {
+    flex: 1 0 30%;
+    padding-top: 200px;
+    padding-left: 50px;
+
+    .info-indonesia {
+
+      &__img {
+        width: 300px;
+        margin-bottom: 30px;
+      }
+
+      &__paraf {
+        width: 80%;
+        color: $font-color;
+
+        h4 {
+          font-size: 1.1em;
+          margin-bottom: 20px;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    a {
+      color: $font-color;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+}
