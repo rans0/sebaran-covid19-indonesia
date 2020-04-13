@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::view('/bckp', 'bckp');
+
 Route::get('/','ApiController@SebaranCovid');
 
 

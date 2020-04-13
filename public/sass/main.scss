@@ -1,0 +1,371 @@
+@import 'reset';
+@import 'variables';
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: set-text-color($font-color);
+  background-color: white;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  height: 655px;
+
+  &__left {
+    flex: 2 0 65%;
+    color: white;
+    background-color: $base-color;
+    padding: 20px;
+
+    header {
+      width: 85%;
+      margin: 0 auto;
+
+      .nav {
+        display: flex;
+        padding: 5px 10px;
+        border-bottom: 1px solid white;
+
+        .nav-logo {
+          img {
+            width: 45px;
+          }
+        }
+
+        .nav-menu {
+          margin: auto 0;
+          margin-left: auto;
+          display: flex;
+
+          &__link {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 25px;
+            transition: .3s ease;
+
+            &:hover {
+              color: brown;
+            }
+          }
+        }
+      }
+    }
+
+    .home-info {
+      width: 85%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0 10px;
+
+      &__title {
+        h5 {
+          font-size: 1.8em;
+          margin-bottom: 15px;
+        }
+      }
+
+      &__paraf {
+        width: 70%;
+      }
+
+      &__flex {
+        display: flex;
+        width: 310px;
+        justify-content: space-between;
+      }
+
+      &__button {
+        margin-top: 40px;
+        a {
+          color: white;
+          text-decoration: none;
+          background-color: $second-color;
+          padding: 8px 20px;
+          font-size: .7em;
+          border-radius: 5px;
+          transition: .5s ease;
+
+          &:hover {
+            box-shadow: 2px 4px 8px #1D0729;
+          }
+        }
+      }
+
+      &__ibutton {
+        margin-top: 40px;
+        a {
+          color: white;
+          text-decoration: none;
+          border: 1px solid white;
+          padding: 8px 20px;
+          font-size: .7em;
+          border-radius: 5px;
+          transition: .5s ease;
+
+          &:hover {
+            background-color: $second-color;
+            border: none;
+            box-shadow: 2px 4px 8px #1D0729;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    flex: 1 0 35%;
+    color: white;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 380px;
+      margin-right: -40px;
+      transform: translateY(15px);
+    }
+  }
+}
+
+.indonesia {
+  display: flex;
+  height: auto;
+  height: 655px;
+
+
+  &-left {
+    flex: 2 0 70%;
+    padding-top: 100px;
+
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      margin-bottom: 70px;
+      padding-right: 50px;
+
+      h5 {
+        font-size: 1.2em;
+        color: $base-color;
+        margin-right: 25px;
+        margin-left: auto;
+      }
+
+      .line {
+        margin: auto 0;
+        width: 630px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $base-color;
+        line-height: 10px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+
+      .card-positif {
+        background-color: $danger-color;
+      }
+
+      .card-sembuh {
+        background-color: $success-color;
+
+        .card-img {
+          width: 110px;
+        }
+      }
+
+      .card-meninggal {
+        background-color: $base-color;
+        margin-right: 50px;
+
+        .card-title {
+          margin-top: 30px;
+        }
+      }
+    }
+
+
+  }
+
+  &-right {
+    flex: 1 0 30%;
+    padding-top: 200px;
+    padding-left: 50px;
+
+    .info-indonesia {
+
+      &__img {
+        width: 300px;
+        margin-bottom: 30px;
+      }
+
+      &__paraf {
+        width: 80%;
+        color: $font-color;
+
+        h4 {
+          font-size: 1.1em;
+          margin-bottom: 20px;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    a {
+      color: $font-color;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.internasional {
+  display: flex;
+  height: 655px;
+
+  &-kiri {
+    min-width: 550px;
+    background-color: $base-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &__img {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 500px;
+      }
+    }
+
+    &__info {
+      width: 300px;
+      padding: 20px;
+      background-color: $base-color;
+      z-index: 2000;
+
+      h4 {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      p {
+        color: white;
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+
+  &-kanan {
+    width: 60%;
+    padding-top: 80px;
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      width: 590px;
+
+      h5 {
+        font-size: 1.2em;
+        color: $font-color;
+        margin-left: 20px;
+      }
+
+      .line {
+        margin: auto 0;
+        width: 450px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $font-color;
+        line-height: 10px;
+      }
+    }
+
+    &__card {
+      // border: 1px solid blue;
+      display: flex;
+      transform: translateY(40%);
+      margin-left: -120px;
+      margin-top: -80px;
+
+      .card-globe__positif {
+        border: 1.5px solid $danger-color;
+
+        .card-globe__title {
+          margin-top: 40px;
+        }
+
+        .card-globe__pfooter {
+          background-color: $danger-color;
+        }
+      }
+
+      .card-globe__sembuh {
+        border: 1.5px solid $success-color;
+
+        .card-globe__sfooter {
+          background-color: $success-color;
+        }
+      }
+
+      .card-globe__meninggal {
+        border: 1.5px solid $base-color;
+
+        .card-globe__title {
+          margin-top: 45px;
+        }
+
+        .card-globe__mfooter {
+          background-color: $base-color;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: $base-color;
+  text-align: center;
+  padding: 10px;
+  color: white;
+
+
+  h3 {
+    font-size: 1em;
+    letter-spacing: .1em;
+  }
+
+  p {
+    font-size: .7em;
+    letter-spacing: .2em;
+  }
+}
