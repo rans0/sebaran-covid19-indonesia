@@ -49,8 +49,14 @@
               Akan tetapi, virus ini juga bisa menyebabkan infeksi
               pernapasan berat, seperti pneumonia.</p>
           </div>
-          <div class="home-info__button">
-            <a href="#indonesia">INFO INDONESIA</a>
+          <div class="home-info__flex">
+            <div class="home-info__button">
+              <a href="#indonesia">INFO INDONESIA</a>
+            </div>
+
+            <div class="home-info__ibutton">
+              <a href="#internasional">INFO INTERNASIONAL</a>
+            </div>
           </div>
         </article>
       </aside>
@@ -68,11 +74,13 @@
         </div>
 
         <div class="indonesia-left__content">
+          @foreach ($indonesia as $id)
+
           <div class="card card-positif">
             <img src="{{ asset('assets/char-positif.png') }}" alt="" class="card-img">
             <h6 class="card-title">POSITIF</h6>
             <div class="card-number">
-              <h6>192</h6>
+              <h6>{{ $id['positif'] }}</h6>
             </div>
           </div>
 
@@ -80,7 +88,7 @@
             <img src="{{ asset('assets/char-sembuh.png') }}" alt="" class="card-img">
             <h6 class="card-title">SEMBUH</h6>
             <div class="card-number">
-              <h6>192</h6>
+              <h6>{{ $id['sembuh'] }}</h6>
             </div>
           </div>
 
@@ -88,9 +96,11 @@
             <img src="{{ asset('assets/char-meninggal.png') }}" alt="" class="card-img">
             <h6 class="card-title">MENINGGAL</h6>
             <div class="card-number">
-              <h6>192</h6>
+              <h6>{{ $id['meninggal'] }}</h6>
             </div>
           </div>
+
+          @endforeach
         </div>
       </article>
 
@@ -109,7 +119,61 @@
         </div>
       </aside>
     </section>
+
+    <section class="internasional" id="internasional">
+      <aside class="internasional-kiri">
+        <div class="internasional-kiri__img">
+          <img src="{{ asset('assets/map-globe.png') }}">
+        </div>
+        <div class="internasional-kiri__info">
+          <h4>LAPORAN KASUS CORONA INTERNASIONAL</h4>
+          <p>Virus ini sudah menyebar luas di seluruh dunia, info lengkap pada table dibawah.</p>
+          <a href="#">Lihat Table &nbsp;<i class="fas fa-chevron-right"></i></a>
+        </div>
+      </aside>
+
+      <article class="internasional-kanan">
+        <div class="internasional-kanan__header">
+          <div class="line"></div>
+          <h5>INTERNASIONAL</h5>
+        </div>
+
+        <div class="internasional-kanan__card">
+          <div class="card-globe card-globe__positif">
+            <img src="{{ asset('assets/char-positif-1.png') }}" class="card-globe__img">
+            <h6 class="card-globe__title">POSITIF</h6>
+            <div class="card-globe__number">
+              <h6>{{ $positif['value'] }}</h6>
+            </div>
+            <div class="cfooter card-globe__pfooter"></div>
+          </div>
+
+          <div class="card-globe card-globe__sembuh">
+            <img src="{{ asset('assets/char-sembuh-1.png') }}" class="card-globe__img">
+            <h6 class="card-globe__title">SEMBUH</h6>
+            <div class="card-globe__number">
+              <h6>{{ $sembuh['value'] }}</h6>
+            </div>
+            <div class="cfooter card-globe__sfooter"></div>
+          </div>
+
+          <div class="card-globe card-globe__meninggal">
+            <img src="{{ asset('assets/char-meninggal-1.png') }}" class="card-globe__img">
+            <h6 class="card-globe__title">MENINGGAL</h6>
+            <div class="card-globe__number">
+              <h6>{{ $meninggal['value'] }}</h6>
+            </div>
+            <div class="cfooter card-globe__mfooter"></div>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
+
+  <footer>
+    <h3>STAY AT HOME</h3>
+    <p>INDONESIA</p>
+  </footer>
 
 </body>
 

@@ -6,7 +6,6 @@ body {
   font-family: 'Nunito', sans-serif;
   color: set-text-color($font-color);
   background-color: white;
-  height: 2000px;
 }
 
 .home {
@@ -75,6 +74,12 @@ body {
         width: 70%;
       }
 
+      &__flex {
+        display: flex;
+        width: 310px;
+        justify-content: space-between;
+      }
+
       &__button {
         margin-top: 40px;
         a {
@@ -87,6 +92,25 @@ body {
           transition: .5s ease;
 
           &:hover {
+            box-shadow: 2px 4px 8px #1D0729;
+          }
+        }
+      }
+
+      &__ibutton {
+        margin-top: 40px;
+        a {
+          color: white;
+          text-decoration: none;
+          border: 1px solid white;
+          padding: 8px 20px;
+          font-size: .7em;
+          border-radius: 5px;
+          transition: .5s ease;
+
+          &:hover {
+            background-color: $second-color;
+            border: none;
             box-shadow: 2px 4px 8px #1D0729;
           }
         }
@@ -114,6 +138,7 @@ body {
 .indonesia {
   display: flex;
   height: auto;
+  height: 655px;
 
 
   &-left {
@@ -205,5 +230,142 @@ body {
       text-decoration: none;
       font-weight: 700;
     }
+  }
+}
+
+
+.internasional {
+  display: flex;
+  height: 655px;
+
+  &-kiri {
+    min-width: 550px;
+    background-color: $base-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &__img {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 500px;
+      }
+    }
+
+    &__info {
+      width: 300px;
+      padding: 20px;
+      background-color: $base-color;
+      z-index: 2000;
+
+      h4 {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      p {
+        color: white;
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+
+  &-kanan {
+    width: 60%;
+    padding-top: 80px;
+
+    &__header {
+      margin: 0 auto;
+      display: flex;
+      width: 590px;
+
+      h5 {
+        font-size: 1.2em;
+        color: $font-color;
+        margin-left: 20px;
+      }
+
+      .line {
+        margin: auto 0;
+        width: 450px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $font-color;
+        line-height: 10px;
+      }
+    }
+
+    &__card {
+      // border: 1px solid blue;
+      display: flex;
+      transform: translateY(40%);
+      margin-left: -120px;
+      margin-top: -80px;
+
+      .card-globe__positif {
+        border: 1.5px solid $danger-color;
+
+        .card-globe__title {
+          margin-top: 40px;
+        }
+
+        .card-globe__pfooter {
+          background-color: $danger-color;
+        }
+      }
+
+      .card-globe__sembuh {
+        border: 1.5px solid $success-color;
+
+        .card-globe__sfooter {
+          background-color: $success-color;
+        }
+      }
+
+      .card-globe__meninggal {
+        border: 1.5px solid $base-color;
+
+        .card-globe__title {
+          margin-top: 45px;
+        }
+
+        .card-globe__mfooter {
+          background-color: $base-color;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: $base-color;
+  text-align: center;
+  padding: 10px;
+  color: white;
+
+
+  h3 {
+    font-size: 1em;
+    letter-spacing: .1em;
+  }
+
+  p {
+    font-size: .7em;
+    letter-spacing: .2em;
   }
 }
