@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Global</title>
   <!-- CSS -->
   <link href="{{ asset('css/main.css') }}" rel="stylesheet">
   <!---BOOTSTRAP 4--->
@@ -37,7 +37,7 @@
         <p>Kasus covid-19 menyebar luas dan terjadi di setiap negara, dapat dilihat negara-negara apa saja yang terkena dampak covid-19 pada table dibawah ini </p>
         <br>
       </div>
-      
+
       <table id="glob" class="table table-striped table-bordered">
         <thead class="thead-dark">
 
