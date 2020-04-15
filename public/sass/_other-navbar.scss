@@ -1,0 +1,37 @@
+@import 'variables';
+
+header {
+  .other-navbar {
+    display: flex;
+    background-color: $base-color;
+    padding: 0 50px;
+
+    img {
+      margin: 10px 0;
+      width: 45px;
+    }
+
+    &__link {
+      margin-left: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 25px;
+        transition: .3s ease;
+
+        &:hover {
+          color: brown;
+        }
+      }
+
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+}

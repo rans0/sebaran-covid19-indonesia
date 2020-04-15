@@ -25,13 +25,13 @@
 
             <div class="nav-menu">
               <div class="nav-menu__item">
-                <a href="" class="nav-menu__link active">HOME</a>
+                <a href="/" class="nav-menu__link active">HOME</a>
               </div>
               <div class="nav-menu__item">
-                <a href="" class="nav-menu__link">GRAPH</a>
+                <a href="/graph" class="nav-menu__link">GRAPH</a>
               </div>
               <div class="nav-menu__item">
-                <a href="" class="nav-menu__link">PENCEGAHAN</a>
+                <a href="/pencegahan" class="nav-menu__link">PENCEGAHAN</a>
               </div>
             </div>
           </nav>
@@ -115,7 +115,7 @@
               provinsi dapat dilihat pada
               data table dibawah ini</p>
           </div>
-          <a href="">Lihat Table &nbsp;<i class="fas fa-chevron-right"></i></a>
+          <a href="/table-indonesia">Lihat Table &nbsp;<i class="fas fa-chevron-right"></i></a>
         </div>
       </aside>
     </section>
@@ -128,7 +128,7 @@
         <div class="internasional-kiri__info">
           <h4>LAPORAN KASUS CORONA INTERNASIONAL</h4>
           <p>Virus ini sudah menyebar luas di seluruh dunia, info lengkap pada table dibawah.</p>
-          <a href="#">Lihat Table &nbsp;<i class="fas fa-chevron-right"></i></a>
+          <a href="/table-internasional">Lihat Table &nbsp;<i class="fas fa-chevron-right"></i></a>
         </div>
       </aside>
 
