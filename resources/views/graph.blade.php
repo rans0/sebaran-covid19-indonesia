@@ -20,11 +20,13 @@
       <img src="../assets/logo.png" alt="" class="other-navbar__img">
       <div class="other-navbar__link">
         <a href="/">HOME</a>
-        <a href="/graph">GRAPH</a>
+        <a href="/graph" class="underline">GRAPH</a>
         <a href="/pencegahan">PENCEGAHAN</a>
       </div>
     </nav>
   </header>
+
+  
   <div class="container-graph">
     <div class="container-g">
       <div class="graph" id="chart">

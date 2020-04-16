@@ -130,6 +130,10 @@ header .other-navbar__link a:hover {
   }
 }
 
+header .other-navbar__link .underline {
+  border-bottom: 1px solid white;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: set-text-color(#2F2E30);

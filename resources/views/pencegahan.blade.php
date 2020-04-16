@@ -19,10 +19,11 @@
       <div class="other-navbar__link">
         <a href="/">HOME</a>
         <a href="/graph">GRAPH</a>
-        <a href="/pencegahan">PENCEGAHAN</a>
+        <a href="/pencegahan" class="underline">PENCEGAHAN</a>
       </div>
     </nav>
   </header>
+
 
   <main>
     <section class="pencegahan">
