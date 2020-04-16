@@ -4,8 +4,8 @@ Sebuah web sederhana yang menampilkan live update sebaran covid 19 di dunia bese
 
 ## Creator
 
-* <a href="https://github.com/rans0">Ran</a> As Backend.
-* <a href="https://github.com/IFadla">Fadla Ichsan</a> As Frontend.
+* <a href="https://github.com/rans0">Ran</a> as Backend.
+* <a href="https://github.com/IFadla">Fadla Ichsan</a> as Frontend.
 
 ## Thanks To
 
