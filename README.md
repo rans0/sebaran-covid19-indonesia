@@ -13,7 +13,7 @@ Terimakasih kepada <a href="https://kawalcorona.com/">Kawal Corona Team ❤</a>.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+project sebaran covid19 ini dibawah lisensi  [MIT license](https://opensource.org/licenses/MIT).
 
 ## Spoiler
 
