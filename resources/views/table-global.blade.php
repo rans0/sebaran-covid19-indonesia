@@ -42,7 +42,6 @@
         <thead class="thead-dark">
 
           <tr>
-            {{-- <th scope="col">No</th> --}}
             <th scope="col">Negara</th>
             <th scope="col">Positif</th>
             <th scope="col">Sembuh</th>
@@ -54,7 +53,6 @@
 
           @foreach ($global as $p)
           <tr>
-            {{-- <td>$no</td> --}}
             <td>{{ $p['attributes']['Country_Region'] }}</td>
             <td>{{ $p['attributes']['Active'] }}</td>
             <td>{{ $p['attributes']['Recovered'] }}</td>

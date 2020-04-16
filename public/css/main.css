@@ -546,6 +546,12 @@ footer h3 {
   letter-spacing: .1em;
 }
 
+footer h4 a{
+    color: white;
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
 footer p {
   font-size: .7em;
   letter-spacing: .2em;

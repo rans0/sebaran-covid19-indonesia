@@ -41,7 +41,6 @@
         <thead class="thead-dark">
 
           <tr>
-            {{-- <th scope="col">No</th> --}}
             <th scope="col">Provinsi</th>
             <th scope="col">Positif</th>
             <th scope="col">Sembuh</th>
@@ -53,7 +52,6 @@
 
           @foreach ($provinsi as $p)
           <tr>
-            {{-- <td>$no</td> --}}
             <td>{{ $p['attributes']['Provinsi'] }}</td>
             <td>{{ $p['attributes']['Kasus_Posi'] }}</td>
             <td>{{ $p['attributes']['Kasus_Semb'] }}</td>
