@@ -7,6 +7,9 @@ Sebuah web sederhana yang menampilkan live update sebaran covid 19 di dunia bese
 * <a href="https://github.com/rans0">Ran</a> as Backend.
 * <a href="https://github.com/IFadla">Fadla Ichsan</a> as Frontend.
 
+## Installations and Usage
+ *soon, project still on update*
+
 ## Thanks To
 
 Terimakasih kepada <a href="https://kawalcorona.com/">Kawal Corona Team ❤</a>.
