@@ -20,4 +20,3 @@ Route::get('/','ApiController@SebaranCovid');
 Route::get('/table-indonesia','ApiController@SebaranIndo');
 Route::get('/table-internasional','ApiController@SebaranGLobal');
 Route::get('/graph','ApiController@showchart');
-
