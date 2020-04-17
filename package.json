@@ -18,4 +18,10 @@
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0"
     }
+
+    "scripts": {
+        "build": "bower install && grunt build",
+        "start": "nf start"
+      }
+
 }
