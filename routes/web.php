@@ -13,14 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::view('/bckp', 'bckp');
 Route::view('/index', 'index');
-// Route::view('/table-indonesia', 'table-indonesia');
-// Route::view('/graph', 'graph');
 Route::view('/pencegahan', 'pencegahan');
 
 Route::get('/','ApiController@SebaranCovid');

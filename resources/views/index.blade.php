@@ -191,6 +191,9 @@
   <footer>
     <h3>STAY AT HOME</h3>
     <p>INDONESIA</p>
+    <h4>Thanks to
+        <span><a href="kawalcorona.com">Kawal Corona Team ❤</a></span>
+    <h4>
   </footer>
 
   <script src="{{ asset('javascript/burger.js') }}"></script>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Indonesia</title>
   <!-- CSS -->
   <link href="{{ asset('css/main.css') }}" rel="stylesheet">
   <!---BOOTSTRAP 4--->
@@ -55,26 +55,24 @@
         <table id="indo" class="table table-striped table-bordered">
           <thead class="thead-dark">
 
-            <tr>
-              {{-- <th scope="col">No</th> --}}
-              <th scope="col">Provinsi</th>
-              <th scope="col">Positif</th>
-              <th scope="col">Sembuh</th>
-              <th scope="col">Meninggal</th>
-            </tr>
+          <tr>
+            <th scope="col">Provinsi</th>
+            <th scope="col">Positif</th>
+            <th scope="col">Sembuh</th>
+            <th scope="col">Meninggal</th>
+          </tr>
 
           </thead>
           <tbody>
-
-            @foreach ($provinsi as $p)
-            <tr>
-              {{-- <td>$no</td> --}}
-              <td>{{ $p['attributes']['Provinsi'] }}</td>
-              <td>{{ $p['attributes']['Kasus_Posi'] }}</td>
-              <td>{{ $p['attributes']['Kasus_Semb'] }}</td>
-              <td>{{ $p['attributes']['Kasus_Meni'] }}</td>
-            </tr>
-            @endforeach
+          
+          @foreach ($provinsi as $p)
+          <tr>
+            <td>{{ $p['attributes']['Provinsi'] }}</td>
+            <td>{{ $p['attributes']['Kasus_Posi'] }}</td>
+            <td>{{ $p['attributes']['Kasus_Semb'] }}</td>
+            <td>{{ $p['attributes']['Kasus_Meni'] }}</td>
+          </tr>
+          @endforeach
 
           </tbody>
           <tfoot class="thead-dark">

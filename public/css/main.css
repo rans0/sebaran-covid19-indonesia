@@ -812,6 +812,12 @@ footer h3 {
   letter-spacing: .1em;
 }
 
+footer h4 a{
+    color: white;
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
 footer p {
   font-size: .7em;
   letter-spacing: .2em;
@@ -871,4 +877,39 @@ footer p {
     overflow-x: scroll;
   }
 }
-/*# sourceMappingURL=main.css.map */
+
+.container-graph .graph {
+  height: 500px;
+  padding: 50px 30px;
+}
+
+.container-graph .graph-info {
+  margin-bottom: 50px;
+}
+
+.container-table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-table .table {
+  width: 70%;
+  -webkit-box-shadow: 0pc 0px 8px #e4e4e4;
+          box-shadow: 0pc 0px 8px #e4e4e4;
+  padding: 50px 30px;
+}
+
+@media only screen and (max-width: 880px) {
+  .container-table .table {
+    width: 100%;
+  }
+}
+
+.container-table .table table {
+  width: 100%;
+}

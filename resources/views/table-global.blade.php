@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Global</title>
   <!-- CSS -->
   <link href="{{ asset('css/main.css') }}" rel="stylesheet">
   <!---BOOTSTRAP 4--->
@@ -43,6 +43,7 @@
         <a href="/graph">GRAPH</a>
         <a href="/pencegahan">PENCEGAHAN</a>
       </div>
+
     </div>
     <div class="container-table">
       <div class="table table-internasional" id="global">
@@ -55,6 +56,16 @@
         <table id="glob" class="table table-striped table-bordered">
           <thead class="thead-dark">
 
+      <table id="glob" class="table table-striped table-bordered">
+        <thead class="thead-dark">
+
+          <tr>
+            <th scope="col">Negara</th>
+            <th scope="col">Positif</th>
+            <th scope="col">Sembuh</th>
+            <th scope="col">Meninggal</th>
+          </tr>
+
             <tr>
               {{-- <th scope="col">No</th> --}}
               <th scope="col">Negara</th>
@@ -65,6 +76,15 @@
 
           </thead>
           <tbody>
+
+          @foreach ($global as $p)
+          <tr>
+            <td>{{ $p['attributes']['Country_Region'] }}</td>
+            <td>{{ $p['attributes']['Active'] }}</td>
+            <td>{{ $p['attributes']['Recovered'] }}</td>
+            <td>{{ $p['attributes']['Deaths'] }}</td>
+          </tr>
+          @endforeach
 
             @foreach ($global as $p)
             <tr>

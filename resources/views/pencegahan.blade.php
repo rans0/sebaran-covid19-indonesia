@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pencegahan</title>
   <!-- CSS -->
   <link href="{{ asset('css/main.css') }}" rel="stylesheet">
   <!-- FONTAWESOME -->
@@ -129,6 +129,9 @@
   <footer>
     <h3>STAY AT HOME</h3>
     <p>INDONESIA</p>
+    <h4>Thanks to
+        <span><a href="kawalcorona.com">Kawal Corona Team ❤</a></span>
+    <h4>
   </footer>
 
   <script src="{{ asset('javascript/burger.js') }}"></script>
