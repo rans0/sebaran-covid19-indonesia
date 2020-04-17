@@ -23,22 +23,39 @@
         <a href="/graph" class="underline">GRAPH</a>
         <a href="/pencegahan">PENCEGAHAN</a>
       </div>
+
+      <div class="other-navbar__btn">
+        <div class="menu-btn" id="menu-btn">
+          <div class="menu-btn__burger" id="menu-btn__burger"></div>
+        </div>
+      </div>
     </nav>
   </header>
 
-  
-  <div class="container-graph">
-    <div class="container-g">
-      <div class="graph" id="chart">
-        <div class="graph-info">
-          <h3>Grafik Covid 19 Provinsi</h3>
-          <p>Indonesia</p>
-        </div>
-        {!! $chart->container() !!}
+  <main>
+    <div class="menu-responsive" id="menu-responsive">
+      <div class="menu-responsive__link">
+        <a href="/">HOME</a>
+        <a href="/graph" class="underline">GRAPH</a>
+        <a href="/pencegahan">PENCEGAHAN</a>
       </div>
     </div>
-  </div>
-  {!! $chart->script() !!}
+
+    <div class="container-graph">
+      <div class="container-g">
+        <div class="graph" id="chart">
+          <div class="graph-info">
+            <h3>Grafik Covid 19 Provinsi</h3>
+            <p>Indonesia</p>
+          </div>
+          {!! $chart->container() !!}
+        </div>
+      </div>
+    </div>
+    {!! $chart->script() !!}
+  </main>
+
+  <script src="{{ asset('javascript/burger.js') }}"></script>
 </body>
 
 </html>

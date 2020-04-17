@@ -15,6 +15,14 @@
 
 <body>
   <main>
+    <div class="menu-responsive" id="menu-responsive">
+      <div class="menu-responsive__link">
+        <a href="/" class="underline">HOME</a>
+        <a href="/graph">GRAPH</a>
+        <a href="/pencegahan">PENCEGAHAN</a>
+      </div>
+    </div>
+
     <section class="home">
       <aside class="home__left">
         <header>
@@ -25,13 +33,19 @@
 
             <div class="nav-menu">
               <div class="nav-menu__item">
-                <a href="/" class="nav-menu__link active">HOME</a>
+                <a href="/" class="nav-menu__link active underline">HOME</a>
               </div>
               <div class="nav-menu__item">
                 <a href="/graph" class="nav-menu__link">GRAPH</a>
               </div>
               <div class="nav-menu__item">
                 <a href="/pencegahan" class="nav-menu__link">PENCEGAHAN</a>
+              </div>
+            </div>
+
+            <div class="other-navbar__btn">
+              <div class="menu-btn" id="menu-btn">
+                <div class="menu-btn__burger" id="menu-btn__burger"></div>
               </div>
             </div>
           </nav>
@@ -73,34 +87,36 @@
           <div class="line"></div>
         </div>
 
-        <div class="indonesia-left__content">
-          @foreach ($indonesia as $id)
+        <div class="slider">
+          <div class="indonesia-left__content">
+            @foreach ($indonesia as $id)
 
-          <div class="card card-positif">
-            <img src="{{ asset('assets/char-positif.png') }}" alt="" class="card-img">
-            <h6 class="card-title">POSITIF</h6>
-            <div class="card-number">
-              <h6>{{ $id['positif'] }}</h6>
+            <div class="card card-positif">
+              <img src="{{ asset('assets/char-positif.png') }}" alt="" class="card-img">
+              <h6 class="card-title">POSITIF</h6>
+              <div class="card-number">
+                <h6>{{ $id['positif'] }}</h6>
+              </div>
             </div>
-          </div>
 
-          <div class="card card-sembuh">
-            <img src="{{ asset('assets/char-sembuh.png') }}" alt="" class="card-img">
-            <h6 class="card-title">SEMBUH</h6>
-            <div class="card-number">
-              <h6>{{ $id['sembuh'] }}</h6>
+            <div class="card card-sembuh">
+              <img src="{{ asset('assets/char-sembuh.png') }}" alt="" class="card-img">
+              <h6 class="card-title">SEMBUH</h6>
+              <div class="card-number">
+                <h6>{{ $id['sembuh'] }}</h6>
+              </div>
             </div>
-          </div>
 
-          <div class="card card-meninggal">
-            <img src="{{ asset('assets/char-meninggal.png') }}" alt="" class="card-img">
-            <h6 class="card-title">MENINGGAL</h6>
-            <div class="card-number">
-              <h6>{{ $id['meninggal'] }}</h6>
+            <div class="card card-meninggal">
+              <img src="{{ asset('assets/char-meninggal.png') }}" alt="" class="card-img">
+              <h6 class="card-title">MENINGGAL</h6>
+              <div class="card-number">
+                <h6>{{ $id['meninggal'] }}</h6>
+              </div>
             </div>
-          </div>
 
-          @endforeach
+            @endforeach
+          </div>
         </div>
       </article>
 
@@ -138,32 +154,34 @@
           <h5>INTERNASIONAL</h5>
         </div>
 
-        <div class="internasional-kanan__card">
-          <div class="card-globe card-globe__positif">
-            <img src="{{ asset('assets/char-positif-1.png') }}" class="card-globe__img">
-            <h6 class="card-globe__title">POSITIF</h6>
-            <div class="card-globe__number">
-              <h6>{{ $positif['value'] }}</h6>
+        <div class="slider">
+          <div class="internasional-kanan__card">
+            <div class="card-globe card-globe__positif">
+              <img src="{{ asset('assets/char-positif-1.png') }}" class="card-globe__img">
+              <h6 class="card-globe__title">POSITIF</h6>
+              <div class="card-globe__number">
+                <h6>{{ $positif['value'] }}</h6>
+              </div>
+              <div class="cfooter card-globe__pfooter"></div>
             </div>
-            <div class="cfooter card-globe__pfooter"></div>
-          </div>
 
-          <div class="card-globe card-globe__sembuh">
-            <img src="{{ asset('assets/char-sembuh-1.png') }}" class="card-globe__img">
-            <h6 class="card-globe__title">SEMBUH</h6>
-            <div class="card-globe__number">
-              <h6>{{ $sembuh['value'] }}</h6>
+            <div class="card-globe card-globe__sembuh">
+              <img src="{{ asset('assets/char-sembuh-1.png') }}" class="card-globe__img">
+              <h6 class="card-globe__title">SEMBUH</h6>
+              <div class="card-globe__number">
+                <h6>{{ $sembuh['value'] }}</h6>
+              </div>
+              <div class="cfooter card-globe__sfooter"></div>
             </div>
-            <div class="cfooter card-globe__sfooter"></div>
-          </div>
 
-          <div class="card-globe card-globe__meninggal">
-            <img src="{{ asset('assets/char-meninggal-1.png') }}" class="card-globe__img">
-            <h6 class="card-globe__title">MENINGGAL</h6>
-            <div class="card-globe__number">
-              <h6>{{ $meninggal['value'] }}</h6>
+            <div class="card-globe card-globe__meninggal">
+              <img src="{{ asset('assets/char-meninggal-1.png') }}" class="card-globe__img">
+              <h6 class="card-globe__title">MENINGGAL</h6>
+              <div class="card-globe__number">
+                <h6>{{ $meninggal['value'] }}</h6>
+              </div>
+              <div class="cfooter card-globe__mfooter"></div>
             </div>
-            <div class="cfooter card-globe__mfooter"></div>
           </div>
         </div>
       </article>
@@ -175,6 +193,7 @@
     <p>INDONESIA</p>
   </footer>
 
+  <script src="{{ asset('javascript/burger.js') }}"></script>
 </body>
 
 </html>

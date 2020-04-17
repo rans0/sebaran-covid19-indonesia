@@ -27,60 +27,75 @@
         <a href="/graph">GRAPH</a>
         <a href="/pencegahan">PENCEGAHAN</a>
       </div>
+
+      <div class="other-navbar__btn">
+        <div class="menu-btn" id="menu-btn">
+          <div class="menu-btn__burger" id="menu-btn__burger"></div>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <div class="container-table">
-    <div class="table table-internasional" id="global">
-      <div class="graph-info">
-        <h3>Data Table Internasional</h3>
-        <p>Kasus covid-19 menyebar luas dan terjadi di setiap negara, dapat dilihat negara-negara apa saja yang terkena dampak covid-19 pada table dibawah ini </p>
-        <br>
+  <main>
+    <div class="menu-responsive" id="menu-responsive">
+      <div class="menu-responsive__link">
+        <a href="/">HOME</a>
+        <a href="/graph">GRAPH</a>
+        <a href="/pencegahan">PENCEGAHAN</a>
       </div>
-      
-      <table id="glob" class="table table-striped table-bordered">
-        <thead class="thead-dark">
-
-          <tr>
-            {{-- <th scope="col">No</th> --}}
-            <th scope="col">Negara</th>
-            <th scope="col">Positif</th>
-            <th scope="col">Sembuh</th>
-            <th scope="col">Meninggal</th>
-          </tr>
-
-        </thead>
-        <tbody>
-
-          @foreach ($global as $p)
-          <tr>
-            {{-- <td>$no</td> --}}
-            <td>{{ $p['attributes']['Country_Region'] }}</td>
-            <td>{{ $p['attributes']['Active'] }}</td>
-            <td>{{ $p['attributes']['Recovered'] }}</td>
-            <td>{{ $p['attributes']['Deaths'] }}</td>
-          </tr>
-          @endforeach
-
-        </tbody>
-        <tfoot class="thead-dark">
-          <tr>
-            <th scope="col">Negara</th>
-            <th scope="col">Positif</th>
-            <th scope="col">Sembuh</th>
-            <th scope="col">Meninggal</th>
-          </tr>
-        </tfoot>
-      </table>
-
     </div>
-  </div>
+    <div class="container-table">
+      <div class="table table-internasional" id="global">
+        <div class="graph-info">
+          <h3>Data Table Internasional</h3>
+          <p>Kasus covid-19 menyebar luas dan terjadi di setiap negara, dapat dilihat negara-negara apa saja yang terkena dampak covid-19 pada table dibawah ini </p>
+          <br>
+        </div>
 
+        <table id="glob" class="table table-striped table-bordered">
+          <thead class="thead-dark">
+
+            <tr>
+              {{-- <th scope="col">No</th> --}}
+              <th scope="col">Negara</th>
+              <th scope="col">Positif</th>
+              <th scope="col">Sembuh</th>
+              <th scope="col">Meninggal</th>
+            </tr>
+
+          </thead>
+          <tbody>
+
+            @foreach ($global as $p)
+            <tr>
+              {{-- <td>$no</td> --}}
+              <td>{{ $p['attributes']['Country_Region'] }}</td>
+              <td>{{ $p['attributes']['Active'] }}</td>
+              <td>{{ $p['attributes']['Recovered'] }}</td>
+              <td>{{ $p['attributes']['Deaths'] }}</td>
+            </tr>
+            @endforeach
+
+          </tbody>
+          <tfoot class="thead-dark">
+            <tr>
+              <th scope="col">Negara</th>
+              <th scope="col">Positif</th>
+              <th scope="col">Sembuh</th>
+              <th scope="col">Meninggal</th>
+            </tr>
+          </tfoot>
+        </table>
+
+      </div>
+    </div>
+  </main>
   <script>
     $(document).ready(function() {
       $('#glob').DataTable();
     });
   </script>
+  <script src="{{ asset('javascript/burger.js') }}"></script>
 </body>
 
 </html>

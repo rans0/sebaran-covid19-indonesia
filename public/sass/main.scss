@@ -9,7 +9,7 @@ body {
 }
 
 .home {
-  width: 100%; 
+  width: 100%;
   display: flex;
   height: 655px;
 
@@ -23,11 +23,16 @@ body {
       width: 85%;
       margin: 0 auto;
 
+      @media only screen and (max-width: 800px) {
+        width: 100%;
+      }
+
       .nav {
         display: flex;
         padding: 5px 10px;
         border-bottom: 1px solid white;
-
+        
+        
         .nav-logo {
           img {
             width: 45px;
@@ -50,6 +55,10 @@ body {
               color: brown;
             }
           }
+
+          @media only screen and (max-width: 800px) {
+            display: none;
+          }
         }
       }
     }
@@ -63,6 +72,10 @@ body {
       margin: 0 auto;
       padding: 0 10px;
 
+      @media only screen and (max-width: 800px) {
+        width: 100%;
+      }
+
       &__title {
         h5 {
           font-size: 1.8em;
@@ -72,6 +85,10 @@ body {
 
       &__paraf {
         width: 70%;
+
+        @media only screen and (max-width: 800px) {
+          width: 90%;
+        }
       }
 
       &__flex {
@@ -132,6 +149,10 @@ body {
       margin-right: -40px;
       transform: translateY(15px);
     }
+    
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
   }
 }
 
@@ -140,17 +161,31 @@ body {
   height: auto;
   height: 655px;
 
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    height: auto;
+  }
+
 
   &-left {
     flex: 2 0 70%;
     padding-top: 100px;
 
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+      padding: 0;
+    }
 
     &__header {
       margin: 0 auto;
       display: flex;
       margin-bottom: 70px;
       padding-right: 50px;
+
+      @media only screen and (max-width: 800px) {
+        margin-top: 50px;
+        padding: 5px 30px;
+      }
 
       h5 {
         font-size: 1.2em;
@@ -171,7 +206,7 @@ body {
 
     &__content {
       display: flex;
-      justify-content: flex-end;
+      // justify-content: flex-end;
 
       .card-positif {
         background-color: $danger-color;
@@ -194,8 +229,6 @@ body {
         }
       }
     }
-
-
   }
 
   &-right {
@@ -203,7 +236,14 @@ body {
     padding-top: 200px;
     padding-left: 50px;
 
+    @media only screen and (max-width: 800px) {
+      padding: 0;
+    }
+
     .info-indonesia {
+      @media only screen and (max-width: 800px) {
+        padding: 50px 50px;
+      }
 
       &__img {
         width: 300px;
@@ -238,6 +278,12 @@ body {
   display: flex;
   height: 655px;
 
+  @media only screen and (max-width: 800px) {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+
   &-kiri {
     min-width: 550px;
     background-color: $base-color;
@@ -245,6 +291,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 800px) {
+      justify-content: unset;
+      height: 600px;
+      width: 100%;
+    }
   
     &__img {
       height: 100%;
@@ -264,6 +316,10 @@ body {
       padding: 20px;
       background-color: $base-color;
       z-index: 2000;
+
+      @media only screen and (max-width: 800px) {
+        padding-left: 50px;
+      }
 
       h4 {
         font-size: 1.1em;
@@ -287,16 +343,34 @@ body {
   &-kanan {
     width: 60%;
     padding-top: 80px;
+    // border: 1px solid blue;
+
+    @media only screen and (max-width: 800px) {
+      background-color: $base-color;
+      padding-top: 40px;
+      width: 100%;
+      padding-bottom: 50px;
+    }
 
     &__header {
       margin: 0 auto;
       display: flex;
       width: 590px;
 
+      @media only screen and (max-width: 800px) {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
       h5 {
         font-size: 1.2em;
         color: $font-color;
         margin-left: 20px;
+
+        @media only screen and (max-width: 800px) {
+          color: white;
+        }
       }
 
       .line {
@@ -306,6 +380,11 @@ body {
         border-radius: 2px;
         background-color: $font-color;
         line-height: 10px;
+
+        @media only screen and (max-width: 800px) {
+          background-color: white;
+          width: 42%;
+        }
       }
     }
 
@@ -315,6 +394,12 @@ body {
       transform: translateY(40%);
       margin-left: -120px;
       margin-top: -80px;
+
+      @media only screen and (max-width: 800px) {
+        transform: translateY(0);
+        margin-left: 0;
+        margin-top: 0;
+      }
 
       .card-globe__positif {
         border: 1.5px solid $danger-color;
@@ -414,57 +499,9 @@ footer {
   }
 }
 
-.container-graph {
-  width: 100%;
-  // height: 800px;
-  display: flex;
-  justify-content: center;
-  // align-items: center;
-  scroll-behavior: unset;
-
-  .container-g {
-    // border: 1px solid magenta;
-    box-shadow: 0pc 0px 8px rgb(228, 228, 228);
-    width: 50%;
-
-    @media only screen and (max-width: 800px) {
-      width: 100%;
-    }
-    height: 100vh;
+.slider {
+  @media only screen and (max-width: 800px) {
+    overflow-x: scroll;
   }
-
-  .graph {
-    // border: 1px solid magenta;
-    height: 500px;
-    padding: 50px 30px;
-
-    &-info {
-      margin-bottom: 50px;
-    }
-
-
-  }
-}
-
-.container-table {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  // border: 1px solid red;
-
-  .table {
-    // border: 1px solid magenta;
-    width: 70%;
-    box-shadow: 0pc 0px 8px rgb(228, 228, 228);
-    padding: 50px 30px;
-
-    @media only screen and (max-width: 880px) {
-      width: 100%;
-    }
-
-    table {
-    width: 100%;
-
-    }
-  }
+  // border: 1px solid black;
 }
