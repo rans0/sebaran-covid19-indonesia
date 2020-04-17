@@ -1,6 +1,6 @@
 ## Tentang
 
-Sebuah web sederhana yang menampilkan live update sebaran covid 19 di dunia beserta chart perkembangan tiap provinsi di indonesia. You can check result <a href="https://https://covid19try.herokuapp.com/">Go to here</a>. 
+Sebuah web sederhana yang menampilkan live update sebaran covid 19 di dunia beserta chart perkembangan tiap provinsi di indonesia. You can check result <a href="https://covid19try.herokuapp.com/">Go to here</a>. 
 
 ## Creator
 
@@ -17,7 +17,3 @@ Terimakasih kepada <a href="https://kawalcorona.com/">Kawal Corona Team ❤</a>.
 ## License
 
 project sebaran covid19 ini dibawah lisensi  [MIT license](https://opensource.org/licenses/MIT).
-
-## Spoiler
-
-![](covid19.gif)
