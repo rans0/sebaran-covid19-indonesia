@@ -19,12 +19,27 @@
       <div class="other-navbar__link">
         <a href="/">HOME</a>
         <a href="/graph">GRAPH</a>
-        <a href="/pencegahan">PENCEGAHAN</a>
+        <a href="/pencegahan" class="underline">PENCEGAHAN</a>
+      </div>
+
+      <div class="other-navbar__btn">
+        <div class="menu-btn" id="menu-btn">
+          <div class="menu-btn__burger" id="menu-btn__burger"></div>
+        </div>
       </div>
     </nav>
   </header>
 
+
   <main>
+    <div class="menu-responsive" id="menu-responsive">
+      <div class="menu-responsive__link">
+        <a href="/">HOME</a>
+        <a href="/graph">GRAPH</a>
+        <a href="/pencegahan" class="underline">PENCEGAHAN</a>
+      </div>
+    </div>
+
     <section class="pencegahan">
       <article class="pencegahan-info">
         <div class="pencegahan-info__header">
@@ -118,6 +133,8 @@
         <span><a href="kawalcorona.com">Kawal Corona Team ❤</a></span>
     <h4>
   </footer>
+
+  <script src="{{ asset('javascript/burger.js') }}"></script>
 </body>
 
 </html>
