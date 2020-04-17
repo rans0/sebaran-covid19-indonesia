@@ -1,6 +1,6 @@
 ## Tentang
 
-Sebuah web sederhana yang menampilkan live update sebaran covid 19 di dunia beserta chart perkembangan tiap provinsi di indonesia. 
+Sebuah web sederhana yang menampilkan live update sebaran covid 19 di dunia beserta chart perkembangan tiap provinsi di indonesia. You can check result <a href="https://https://covid19try.herokuapp.com/">Go to here</a>. 
 
 ## Creator
 
