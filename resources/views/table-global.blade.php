@@ -53,9 +53,6 @@
           <br>
         </div>
 
-        <table id="glob" class="table table-striped table-bordered">
-          <thead class="thead-dark">
-
       <table id="glob" class="table table-striped table-bordered">
         <thead class="thead-dark">
 
@@ -66,16 +63,8 @@
             <th scope="col">Meninggal</th>
           </tr>
 
-            <tr>
-              {{-- <th scope="col">No</th> --}}
-              <th scope="col">Negara</th>
-              <th scope="col">Positif</th>
-              <th scope="col">Sembuh</th>
-              <th scope="col">Meninggal</th>
-            </tr>
-
-          </thead>
-          <tbody>
+        </thead>
+        <tbody>
 
           @foreach ($global as $p)
           <tr>
@@ -86,25 +75,17 @@
           </tr>
           @endforeach
 
-            @foreach ($global as $p)
-            <tr>
-              {{-- <td>$no</td> --}}
-              <td>{{ $p['attributes']['Country_Region'] }}</td>
-              <td>{{ $p['attributes']['Active'] }}</td>
-              <td>{{ $p['attributes']['Recovered'] }}</td>
-              <td>{{ $p['attributes']['Deaths'] }}</td>
-            </tr>
-            @endforeach
+        </tbody>
+        <tfoot class="thead-dark">
 
-          </tbody>
-          <tfoot class="thead-dark">
             <tr>
               <th scope="col">Negara</th>
               <th scope="col">Positif</th>
               <th scope="col">Sembuh</th>
               <th scope="col">Meninggal</th>
             </tr>
-          </tfoot>
+
+        </tfoot>
         </table>
 
       </div>
